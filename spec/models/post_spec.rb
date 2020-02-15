@@ -20,7 +20,7 @@ RSpec.describe Post, type: :model do
 			@post.save
 		end
 
-		it "titleが入力されていないので保存されない" do
+		it "titleが入力されていない" do
 			expect(@post).to be_invalid
 			expect(@post.errors[:title]).to include("can't be blank")
 		end
